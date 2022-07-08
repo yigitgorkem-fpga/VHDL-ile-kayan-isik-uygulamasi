@@ -15,8 +15,7 @@ end kayan_isik;
 
 architecture Behavioral of kayan_isik is
 
-signal mevcut_durum : std_logic_vector(bit_sayisi-1 downto 0):="0000000000000001";
--- mevcut_durum initialized as "0000000000000001"
+signal mevcut_durum : std_logic_vector(bit_sayisi-1 downto 0):="0000000000000001";-- mevcut_durum initialized as "0000000000000001"
 
 begin
 
@@ -24,8 +23,7 @@ process(clk) begin -- process will work depend on changing of clk
 
 if (rising_edge(clk)) then
  
-     mevcut_durum<=mevcut_durum(14 downto 0)& mevcut_durum(15); 
-     --Most Significant Bit will transfer to Least Significant Bit
+     mevcut_durum<=mevcut_durum(14 downto 0)& mevcut_durum(15);--Most Significant Bit will transfer to Least Significant Bit
 
  end if;
  
